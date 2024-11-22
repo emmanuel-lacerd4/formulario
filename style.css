@@ -1,0 +1,523 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: contato;
+    src: url(fontes/bubblegum-sans-regular.otf);
+    font-weight: normal;
+}
+
+/*Comentários*/
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cor1: #ff0000;
+    /*Cor de títulos*/
+    --cor2: #000000;
+    /*Cor dos botões*/
+    --cor3: #3a1818;
+    /*Fundo do menu*/
+    --cor4: #ff0000;
+    /*Borda do menu*/
+    --cor5: #ffffff;
+    /* Cor do site */
+
+    --titulo: "Montserrat", sans-serif;
+}
+
+body {
+    background: var(--cor5);
+}
+
+.conteiner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+h1 {
+    font-family: contato;
+    text-align: center;
+    color: var(--cor1);
+    font-size: 3em;
+}
+
+.layout {
+    /* Centralizar o conteúdo */
+    margin: 0 auto;
+}
+
+.btn_flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    background: var(--cor2);
+    color: var(--cor4);
+    font-size: 1.1em;
+    padding: 7px;
+    margin: 0px 5px 15px 5px;
+    border-radius: 10px;
+}
+
+/* Página Vídeo */
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*___________________________________*/
+/* Explicação Media Query */
+
+/* Smartphone Portrait - em pé */
+
+/* Menu */
+header {
+    height: 60px;
+}
+
+.logo img {
+    padding: 5px 10px;
+    /*: 1px vertical ||, 2px horizontal ==> ; */
+}
+
+#check {
+    display: none;
+}
+
+.label_menu {
+    font-size: 3em;
+    color: #00000080;
+    margin-left: 50px;
+}
+
+nav ul {
+    list-style: none;
+    background: var(--cor3);
+    height: 100vh;
+    /* Altura total e compativel de cada dispositivo */
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    right: -100%;
+    font-family: var(--titulo);
+}
+
+#check:checked~ul {
+    right: 0;
+}
+
+nav ul li {
+    padding: 20px;
+    border-bottom: 1px solid #a9a9a9;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--cor4);
+}
+
+/* BANNER - Esconder os banners */
+.anime1,
+.anime2 {
+    display: none;
+}
+
+/* FORMULÁRIO */
+.form {
+    font-family: var(--titulo);
+}
+
+.form p {
+    font-size: 1em;
+}
+
+#usuario,
+#endereco,
+#mensagem,
+#pedido,
+#sexo {
+    border: 1px solid var(--cor3);
+    width: 340px;
+    margin: 15px 5px;
+    padding: 5px;
+}
+
+#sexo {
+    width: 280px;
+}
+
+#legend {
+    font-size: 1.3em;
+}
+
+input,
+select,
+textarea {
+    height: 2em;
+    border: 1px solid var(--cor3);
+    margin: 5px;
+    padding: 2px;
+    background: #e5e5e6;
+}
+
+textarea {
+    margin-top: 15px;
+    background: var(--cor3);
+}
+
+#rodape {
+    text-align: center;
+}
+
+/* Página Vídeo */
+#filme {
+    height: 30vh;
+    margin-bottom: 15px;
+}
+
+#musica {
+    margin-bottom: 25px;
+}
+
+/* Página fotos */
+.fotos {
+    display: flex;
+    flex-direction: column;
+}
+
+.galeria {
+    width: 82vw;
+    list-style: none;
+    margin: 30px auto;
+}
+
+.galeria li span {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    color: var(--cor5);
+}
+
+.galeria li {
+    justify-content: center;
+    margin: 10px;
+}
+
+.galeria img {
+    background: var(--cor4);
+    padding: 5px;
+    width: 280px;
+    height: 200px;
+}
+
+.aumentar:hover {
+    transform: scale(1.3);
+}
+
+.layout p {
+    font-family: var(--textos);
+}
+
+/* Smartphone Landscape - deitado */
+@media (min-width: 576px) {
+    .layout {
+        max-width: 540px;
+    }
+
+    /* BANNER */
+    .anime1,
+    .anime2 {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .anime2 {
+        display: inline;
+    }
+
+    /* FORMULÁRIO */
+    #usuario,
+    #endereco,
+    #mensagem,
+    #pedido {
+        width: 520px;
+    }
+
+    /* Página Fotos */
+    #filme {
+        height: 78vh;
+    }
+
+    .galeria {
+        width: 85vw;
+    }
+
+    .galeria li {
+        text-align: center;
+    }
+
+    .galeria img {
+        width: 280px;
+        height: 210px;
+    }
+
+    .galeria span {
+        display: none;
+    }
+}
+
+/* Tablet Portrait - em pé */
+@media (min-width: 768px) {
+    .layout {
+        max-width: 720px;
+    }
+
+    .anime1 {
+        display: inline;
+    }
+
+    .anime2 {
+        display: none;
+    }
+
+    /* FORMULÁRIO */
+    #usuario,
+    #endereco,
+    #mensagem,
+    #pedido {
+        width: 700px;
+    }
+
+    #usuario {
+        background: url(img/icontato.png) no-repeat 95% 95%;
+    }
+
+    #endereco {
+        background: url(img/iendereco.png) no-repeat 95% 95%;
+    }
+
+    #mensagem {
+        background: url(img/imensagem.png) no-repeat 95% 95%;
+
+    }
+
+    #pedido {
+        background: url(img/ipgto.png) no-repeat 95% 95%;
+    }
+
+    /* Página Vídeo */
+    #filme {
+        height: 38vh;
+    }
+}
+
+/* Página Fotos */
+.fotos {
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.galeria {
+    width: 81vw;
+}
+
+.galeria li {
+    float: left;
+}
+
+/*Tablet Landscape - deitado*/
+@media (min-width: 992px) {
+
+    .layout {
+        max-width: 960px;
+    }
+
+
+    /* BANNER */
+    .banner {
+        height: 36vh;
+    }
+
+    /* FORMULÁRIO */
+    #usuario,
+    #endereco,
+    #mensagem,
+    #pedido {
+        width: 940px;
+    }
+
+    /* Página Vídeo */
+    #filme {
+        height: 65vh;
+    }
+
+    .galeria {
+        width: 61vw;
+    }
+}
+
+/*PC*/
+@media (min-width: 1200px) {
+    .layout {
+        max-width: 1140px;
+    }
+
+    header {
+        height: 90px;
+    }
+
+    .logo img {
+        margin: 20px 0px 0px 10px;
+    }
+
+    .label_menu {
+        display: none;
+    }
+
+    nav ul {
+        position: static;
+        height: auto;
+        background: transparent;
+        margin-top: 30px;
+    }
+
+    nav ul li {
+        float: left;
+        border: 0;
+    }
+
+    nav ul li a {
+        color: var(--cor1);
+        font-weight: bold;
+    }
+
+    nav ul li a:hover {
+        color: var(--cor3);
+    }
+
+    .banner {
+        height: 45vh;
+    }
+
+    .banner_anime {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        height: 350px;
+        margin: 0;
+    }
+
+    .anime1,
+    .anime2 {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .banner_anime img {
+        position: absolute;
+        transition-property: opacity;
+        transition-duration: 1s;
+        transition-timing-function: linear;
+        /* ease, linear, ease-in, ease-out, aliviar-in-out, cubico-bizier */
+    }
+
+    .anime1,
+    .anime2:hover {
+        opacity: 1;
+    }
+
+    .anime1:hover,
+    .anime2 {
+        opacity: 0;
+    }
+
+    h1 {
+        margin-top: 80px;
+    }
+
+    /*Formulário*/
+    #usuario,
+    #endereco,
+    #mensagem,
+    #pedido {
+        width: 1120px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+
+    /*RODAPÉ*/
+    .flex {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+
+    /* Página Vídeo */
+    .radio-tv {
+        width: 150vw;
+        height: 100vh;
+        background: url(img/radio-tv.png) no-repeat;
+        margin: 5px auto;
+    }
+
+    #filme {
+        width: 35vw;
+        height: 55vh;
+        position: relative;
+        display: block;
+        margin-right: 530px;
+        margin-bottom: 200px;
+    }
+
+    #musica {
+        position: relative;
+        display: block;
+        margin: 100px 0px 0px 305px;
+    }
+
+    /* Página Fotos */
+    .galeria {
+        width: 61vw;
+    }
+}
+
+/*___________________________________*/
+/*Explicação flexbox*/
+.emmanuel {
+    height: 50px;
+    /*Alinhamento da altura de cor no fundo*/
+    background: #008000;
+    display: flex;
+    flex-flow: row wrap;
+    /*esse é o flex-direction e flex-warp juntos e recomendado*/
+    /*flex-direction: row; row-reverse; column; e column-reverse;*/
+    /*flex-wrap: wrap;, nowrap; e wrap-reverse;*/
+    justify-content: center;
+    /*Alinhamento*/
+    align-items: center;
+    /*Alinhamento dos itens na horizontal de acordo com a fonte*/
+    gap: 5px;
+}
+
+.joao {
+    width: 150px;
+    height: 100px;
+    background: #ffffff;
+    border: 1px solid #000000;
+    font-size: 2em;
+    flex: auto;
+    flex-grow: 5;
+}
+
+.ola5 {
+    flex-grow: 5;
+}

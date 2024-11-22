@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8"> <!--charset="" - -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aqui você irá encontrar..."> <!-- Descrição externa -->
+    <meta name="keywords" content="Jogos, game, playstation, xbox..."> <!-- Palavra chave -->
+    <meta name="author" content="Emmanuel L. Nogueira"> <!-- Desenvolvedor do video.html -->
+
+
+    <title>Games</title>
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <!-- href="caminho/icone_na_guia_do_navegador.ico" -->
+    <link rel="stylesheet" href="style.css"> <!-- href="caminho_style.css" -->
+</head>
+
+<body>
+
+    <header> <!-- <header> - comando para editar o cabeçalho -->
+
+        <div class="layout conteiner">
+            <div class="logo"> <!--class="classe_logo"-->
+                <img src="img/logo.png" alt="Logotipo controle game"> <!-- src="caminho_img/logo.png" -->
+            </div>
+            <nav class="menu"> <!--<nav> - comando para navegação-->
+                <input type="checkbox" name="check" id="check">
+                <label for="check" class="label_menu">&#x2630;</label> <!--&#x2630 - icone de hamburguer-->
+                <ul>
+                    <li><a href="index.html">Contatos</a></li> <!-- href="caminho_index.html" -->
+                    <li><a href="fotos.html">Fotos</a></li> <!-- href="caminho_fotos.html" -->
+                    <li><a href="video.html">Vídeos</a></li> <!-- href="caminho_video.html" -->
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+    <div class="layout banner">
+        <div class="banner_anime">
+            <img class="anime1" src="img/banner1.jpg" alt="Jogo do God Of War" title="Kratos">
+            <!-- <img> - src"caminho/banner1.jpg" -->
+            <img class="anime2" src="img/banner2.jpg" alt="Jogo do God Of War" title="Kratos">
+            <!-- <img> - src"caminho/banner2.jpg" -->
+        </div>
+    </div>
+
+    <section class="layout">
+
+        <h1>Som e Vídeo</h1>
+
+
+
+
+        <article class="flex radio-tv">
+            <iframe id="filme" width="560" height="315" src="https://www.youtube.com/embed/CJ_GCPaKywg"
+                title="God of War - E3 2016 Gameplay Trailer | PS4" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+            <audio id="musica" controls="controls">
+                <source src="videos/musica.mp3" type="audio/mpeg">
+                <source src="videos/musica.ogg" type="audio/ogg">
+                Desculpe mas não foi possivel reproduzir o audio.
+            </audio>
+        </article>
+    </section>
+
+    <footer id="rodape">
+        <div class="layout flex">
+            <p>&copy; 2024. Desenvolvido para o curso Técnico em Informática</p>
+            <p>
+                <a href="https://www.facebook.com/emmanuel.lacerd4/" target="_blank"><img src="img/facebook.png"
+                        alt="Facebook"></a>
+                <a href="https://www.instagram.com/emmanuel.lacerd4/" target="_blank"><img src="img/instagram.png"
+                        alt="Instagram"></a>
+                <a href="https://x.com/emmanuellacerd4/" target="_blank"><img src="img/x_twitter.png"
+                        alt="X \ ex-Twitter"></a>
+                <a href="https://www.linkedin.com/in/emmanuellacerd4/" target="_blank"><img src="img/linkedin.png"
+                        alt="LinkedIn"></a>
+                <a href="https://www.youtube.com/@Emano.11" target="_blank"><img src="img/youtube.png"
+                        alt="YouTube"></a>
+                <a href="https://github.com/emmanuel-lacerd4" target="_blank"><img src="img/github.png"
+                        alt="GitHub"></a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
